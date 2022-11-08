@@ -72,7 +72,7 @@ def set_lang():
 @app.route("/")
 def root():
     lang_id = get_lang()
-    return render_template('mainpage.html', translation = translations[lang_id])
+    return render_template('home_alt.html', translation = translations[lang_id])
 
 @app.route("/kurumsal")
 def page_kurumsal():
@@ -111,4 +111,4 @@ def page_haberler():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0')

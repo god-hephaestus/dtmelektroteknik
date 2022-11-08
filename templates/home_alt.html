@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  {% include 'HEAD.html' %}
+  <link href="../static/css/zgr.css" rel="stylesheet">
+
+  <title>{{ translation[17] }}</title>
+</head>
+
+<body>
+  <section class="hero zgr-hero">
+    <div class="hero-inner zgr-hero-inner" style="z-index: 2;">
+      <h1>{% if session['language'] == 0 %}
+        DTM Elektroteknik A.Ş.
+        {% else %}
+        DTM Electrotechnical Inc.
+        {% endif %}</h1>
+      <div class="row">
+        <div class="col">
+          <a href="#zgr-page-content" class="btn zgr-btn">▼</a>
+        </div>
+      </div>
+    </div>
+    <div id="zgr-background-ptn"></div>
+  </section>
+  <div id="zgr-page-content"></div>  
+  {% include 'nav.html' %}
+
+  <div class="container align-self-center">
+    <div class="row align-self-center mx-auto" id="cards_landscape_wrap-2">
+      <!-- CARD1 START-->
+      <div class="col-xs-12 col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4">
+        <a href="/kurumsal">
+          <div class="card-flyer">
+            <div class="text-box">
+              <div class="image-box">
+                <img src="../static/img/icon-kurumsal.jpg" alt="" />
+              </div>
+              <div class="text-container">
+                <h6 class="text-uppercase">{{ translation[2] }}</h6>
+                <p>{% if session['language'] == 0 %}
+                  DTM Elektroteknik A.Ş. 2000 yılından bu yana tecrübeli kadrosu ile 25A'den 6300A'e kadar busbar
+                  üretimi ile hizmet vermektedir. Misyonumuz sahip olduğumuz belge ve sertifika standartlarında müşteri
+                  memnuniyetini sağlamak, yurt içi ve dışında busbar sistemlerini en iyi şekilde üretmek ve busbar
+                  sistemlerinde güvenilir ve kaliteli hizmet sunmaktır.
+                  {% else %}
+                  DTM Electrotechnical Inc. has been providing service with busbar production from 25A to 6300A with its
+                  experienced staff since 2000. Our mission is to ensure customer satisfaction in the document and
+                  certificate standards we have, to produce busbar systems in the best way in Turkey and abroad, and to
+                  to provide reliable and quality service in their systems.
+                  {% endif %}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- CARD1 END-->
+      <!-- col-xs-12 col-sm-6 col-md-3 col-lg-3 -->
+      <!-- CARD2 START-->
+      <div class="col-xs-12 col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4">
+        <div class="card-flyer">
+          <div class="text-box">
+            <div class="image-box">
+              <img src="../static/img/icon-products.jpg">
+            </div>
+            <div class="text-container">
+              <h6 class="text-uppercase">{{ translation[4] }}</h6>
+              <p>{% if session['language'] == 0 %}
+                25A - 6300A arası, yüksek kaliteli ve standartlara uygun üretilen Busbar Kanal Sistemleri hakkında bilgi
+                almak için bu bölümü ziyaret ediniz.
+                {% else %}
+                Please visit this section for information about Busbar Systems between 25A - 6300A, produced in
+                accordance with standards and high quality
+                {% endif %}<br><br>
+                <a href="/products#product1">AB-E {{ translation[6] }} BUSBAR (25A-63A)</a> <br>
+                <a href="/products#product2">SP-H {{ translation[7] }} BUSBAR (100A-160A)</a> <br>
+                <a href="/products#product3">MP-H {{ translation[8] }} BUSBAR (160A-600A)</a> <br>
+                <a href="/products#product3">HP-K {{ translation[9] }} BUSBAR (400A-6300A)</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CARD2 END-->
+      <!-- CARD3 START-->
+      <div class="col-xs-12 col-sm-8 offset-sm-2 offset-md-0 col-md-6 col-lg-4">
+        <a href="/hizmetler">
+          <div class="card-flyer">
+            <div class="text-box">
+              <div class="image-box">
+                <img src="../static/img/icon-hizmetler.jpg" alt="" />
+              </div>
+              <div class="text-container">
+                <h6>{% if session['language'] == 0 %}
+                  HİZMETLER
+                  {% else %}
+                  SERVICES
+                  {% endif %}</h6>
+                <p>{% if session['language'] == 0 %}
+                  Satış öncesi ve satış sonrası hizmetleri mükemmel bir düzeyde vermek, DTM Elektroteknik A.Ş. için çok
+                  önemlidir. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat soluta impedit, optio
+                  similique esse nemo provident temporibus officia sed illum tenetur labore, nobis quasi explicabo,
+                  cupiditate velit veniam sint veritatis!
+                  {% else %}
+                  Satış öncesi ve satış sonrası hizmetleri mükemmel bir düzeyde vermek, DTM Elektroteknik A.Ş. için çok
+                  önemlidir. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat soluta impedit, optio
+                  similique esse nemo provident temporibus officia sed illum tenetur labore, nobis quasi explicabo,
+                  cupiditate velit veniam sint veritatis!
+                  {% endif %}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- CARD3 END-->
+      <!-- ACCORDION COL START-->
+      <section id="acccc" class="ac-container col-xs-12 col-sm-12 col-md-6 col-lg-4 ">
+        <div>
+          <input id="ac-1" name="accordion-1" type="radio">
+          <label for="ac-1">{% if session['language'] == 0 %}
+            Alüminyum Kasa
+            {% else %}
+            Aluminum Case
+            {% endif %}</label>
+          <article class="ac-alk">
+            <p>{% if session['language'] == 0 %}
+              Hafif Ağırlık <br>
+              Korozyon Direnci <br>
+              Yüksek Isı Dağılımı <br>
+              Kolay Montaj
+              {% else %}
+              Light Weight <br>
+              Corrosion Resistance <br>
+              High Heat Dissipation <br>
+              Easy Assembly
+              {% endif %}</p>
+          </article>
+        </div>
+        <div>
+          <input id="ac-2" name="accordion-1" type="radio">
+          <label for="ac-2">{% if session['language'] == 0 %}
+            İzolasyon
+            {% else %}
+            Isolation
+            {% endif %}</label>
+          <article class="ac-izol">
+            <p>{% if session['language'] == 0 %}
+              Epoksi <br>
+              Yüksek Çalışma Isısı <br>
+              Dielektrik Dayanım<br>
+              Optimum Isı Dağılım için İnce Kat<br>
+              Neme Karşı Epoksi
+              {% else %}
+              Epoxy <br>
+              High Working Temperature <br>
+              Dielectric Strength<br>
+              Thin Coat for Optimum Heat Dissipation<br>
+              Moisture Resistant Epoxy
+              {% endif %}
+            </p>
+          </article>
+        </div>
+        <div>
+          <input id="ac-3" name="accordion-1" type="radio">
+          <label for="ac-3">{% if session['language'] == 0 %}
+            İletkenler
+            {% else %}
+            Conductors
+            {% endif %}</label>
+          <article class="ac-ilet">
+            <p>{% if session['language'] == 0 %}
+              Yüksek Elektrik İletkenliği <br>
+              Isı Rezistansı <br>
+              Güvenilir Güçlü Sağlam Yapı
+              {% else %}
+              High Electrical Conductivity <br>
+              Heat Resistor <br>
+              Reliable Strong Robust Construction
+              {% endif %}</p>
+          </article>
+        </div>
+        <div>
+          <input id="ac-4" name="accordion-1" type="radio" checked="">
+          <label for="ac-4">{% if session['language'] == 0 %}
+            Uygulama Alanları
+            {% else %}
+            Application
+            {% endif %}</label>
+          <article class="ac-uygl">
+            <p>{% if session['language'] == 0 %}
+              Yüksek Binalar<br>Hastaneler<br>Sanayi Tesisleri<br>Oteller<br>Bankalar<br>Hava Alanları<br>Data
+              Merkezleri<br>AVM Alışveriş Merkezleri
+              {% else %}
+              High Buildings<br>Hospitals<br>Industrial Facilities<br>Hotels<br>Banks<br>Airports<br>Data
+              Centers<br>Shopping Malls
+              {% endif %}</p>
+          </article>
+        </div>
+      </section>
+      <!-- ACCORDION COL END-->
+      <!-- NEWS-->
+      <div class="newsmain col-lg-4 col-md-4 col-sm-8 offset-sm-2 offset-md-0 col-xs-12 container">
+        
+          <a href="/haberler">
+            <div class="card-flyer align-self-center justify-content-center ">
+              <div class="text-box">
+                <div class="image-box">
+                  <img src="../static/img/icon-news.jpg" alt="" />
+                </div>
+                <div class="text-container">
+                  <h6 class="text-uppercase">{{ translation[15] }}</h6>
+                  <p>{% if session['language'] == 0 %}
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda optio minima eum velit nam amet, exercitationem voluptatem vitae totam commodi repudiandae reiciendis accusamus placeat ex voluptatum nostrum saepe aliquid id?
+                    {% else %}
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse provident nisi error distinctio recusandae odio fugiat quae illum blanditiis atque delectus, aut expedita dolorum eius laborum repellat numquam explicabo ea.
+                    {% endif %}</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        
+      </div>
+      <!-- OWL CAROUSEL START-->
+      <div class="col-lg-4 col-md-4 col-sm-8 offset-sm-2 offset-md-0 col-xs-12 ">
+        <div id="fade" class="carousel slide carousel-fade " data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../static/img/icon-uygulama-avm.jpg" class="d-block w-100" alt="">
+              <h5>{% if session['language'] == 0 %}
+                Alışveriş Merkezleri
+                {% else %}
+                Shopping Malls
+                {% endif %}</h5>
+              <p class="">{{ translation[11] }}</p>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/icon-uygulama-datacenter.jpg" class="d-block w-100" alt="">
+              <h5>{% if session['language'] == 0 %}
+                Data Merkezleri
+                {% else %}
+                Data Centers
+                {% endif %}</h5>
+              <p class="">{{ translation[11] }}</p>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/icon-uygulama-hastane.jpg" class="d-block w-100" alt="">
+              <h5>{% if session['language'] == 0 %}
+                Hastaneler
+                {% else %}
+                Hospitals
+                {% endif %}</h5>
+              <p class="">{{ translation[11] }}</p>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/icon-uygulama-sanayi.jpg" class="d-block w-100" alt="">
+              <h5>{% if session['language'] == 0 %}
+                Sanayiler
+                {% else %}
+                Industrial Facilities
+                {% endif %}</h5>
+              <p class="">{{ translation[11] }}</p>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/icon-uygulama-yuksek-bina.jpg" class="d-block w-100" alt="">
+              <h5>{% if session['language'] == 0 %}
+                Yüksek Binalar
+                {% else %}
+                High Buildings
+                {% endif %}</h5>
+              <p class="">{{ translation[11] }}</p>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/icon-uygulama-havaalani.jpg" class="d-block w-100" alt="">
+              <h5>{% if session['language'] == 0 %}
+                Hava Alanları
+                {% else %}
+                Airports
+                {% endif %}</h5>
+              <p class="">{{ translation[11] }}</p>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/icon-uygulama-otel.jpg" class="d-block w-100" alt="">
+              <h5>{% if session['language'] == 0 %}
+                Oteller
+                {% else %}
+                Hotels
+                {% endif %}</h5>
+              <p class="">{{ translation[11] }}</p>
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/icon-uygulama-banka.jpg" class="d-block w-100" alt="">
+              <h5>{% if session['language'] == 0 %}
+                Bankalar
+                {% else %}
+                Banks
+                {% endif %}</h5>
+              <p class="">{{ translation[11] }}</p>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#fade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#fade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+  </div>
+
+
+  <!-- Footer -->
+  {% include 'FOOT.html' %}
+
+
+
+</body>
+
+</html>

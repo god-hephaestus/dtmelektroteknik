@@ -1,51 +1,44 @@
 <div class="navsection sticky-top">
-    <nav class="navbar ">
+    <nav class="navbar container">
         <!-- LOGO -->
         <div class="logo">
             <a href="/"><img src="../static/img/dtm-logo.png"></a>
         </div>
         <!-- NAVIGATION MENU -->
-        <ul class="nav-links">
+        <ul class="nav-links m-0">
             <!-- USING CHECKBOX HACK -->
             <input type="checkbox" id="checkbox_toggle" />
             <label for="checkbox_toggle" class="hamburger">&#9776;</label>
             <!-- NAVIGATION MENUS -->
             <div class="menu text-uppercase">
-                <li><a href="/">{{ translation[1] }}</a></li>
-                <li><a href="/kurumsal">{{ translation[2] }}</a></li>
-                <li class="services">
-                    <a href="/products">{{ translation[4] }}</a>
-                    <!-- DROPDOWN MENU -->
-                    <ul class="dropdown">
-                        <li><span></span><a href="/products#product1">AB-E {{ translation[6] }} BUSBAR</a></li>
-                        <li><span></span><a href="/products#product2">SP-H {{ translation[7] }} BUSBAR</a></li>
-                        <li><span></span><a href="/products#product3">MP-H {{ translation[8] }} BUSBAR</a></li>
-                        <li><span></span><a href="/products#product4">HP-K {{ translation[9] }} BUSBAR</a></li>
-                    </ul>
-                </li>
-                <li><a href="/hizmetler">{% if session['language'] == 0 %}
-                        HİZMETLER
-                        {% else %}
-                        SERVICES
-                        {% endif %}</a></li>
-                <li><a href="/referanslar">{{ translation[13] }}</a></li>
-                <li><a href="/sertifikalar">{% if session['language'] == 0 %}
-                        SERTİFİKALARIMIZ
-                        {% else %}
-                        CERTIFICATES
-                        {% endif %}</a></li>
-                <li><a href="/haberler">{{ translation[15] }}</a></li>
-                <li><a href="/iletisim">{{ translation[10] }}</a></li>
-                <li>
-                    <form action="/set_lang" method="post">
-                        <input hidden name="langval"
-                            value="{% if session['language'] == 0 %}1{% else %}0{% endif %}"></input>
-                        <button type="submit" id="switchlang">
-                            <img id="langimg"
-                                src="../static/img/flag-{% if session['language'] == 0 %}eng{% else %}tr{% endif %}.png">
-                        </button>
-                    </form>
-                </li>
+                    <li><a href="/kurumsal">{{ translation[2] }}</a></li>
+                    <li class="services">
+                        <a href="/products">{{ translation[4] }}</a>
+                        <!-- DROPDOWN MENU -->
+                        <ul class="dropdown">
+                            <li><span></span><a href="/products#product1">AB-E {{ translation[6] }} BUSBAR</a></li>
+                            <li><span></span><a href="/products#product2">SP-H {{ translation[7] }} BUSBAR</a></li>
+                            <li><span></span><a href="/products#product3">MP-H {{ translation[8] }} BUSBAR</a></li>
+                            <li><span></span><a href="/products#product4">HP-K {{ translation[9] }} BUSBAR</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/hizmetler">{% if session['language'] == 0 %}
+                            HİZMETLER
+                            {% else %}
+                            SERVICES
+                            {% endif %}</a></li>
+                    <li><a href="/referanslar">{{ translation[13] }}</a></li>
+                    <li><a href="/iletisim"><i class="fa-solid fa-envelope-open-text"></i></a></li>
+                    <li>
+                        <form action="/set_lang" method="post">
+                            <input hidden name="langval"
+                                value="{% if session['language'] == 0 %}1{% else %}0{% endif %}"></input>
+                            <button type="submit" id="switchlang">
+                                <img id="langimg"
+                                    src="../static/img/flag-{% if session['language'] == 0 %}eng{% else %}tr{% endif %}.png">
+                            </button>
+                        </form>
+                    </li>
             </div>
         </ul>
     </nav>

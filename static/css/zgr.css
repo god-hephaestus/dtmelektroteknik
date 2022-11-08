@@ -1,0 +1,24 @@
+/* HERO */
+#zgr-background-ptn {
+    height: 100vh;
+    width: 100vw;
+    background-image: radial-gradient(
+        rgba(255,255,255,0.1) 9%, transparent 9%
+    );
+    background-position: 0% 0%;
+    background-size: 10vmin 10vmin;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transition: opacity 1s ease, background-size 10s ease;
+}
+
+.zgr-hero-inner:hover ~ #zgr-background-ptn {
+    background-size: 9vmin 9vmin;
+    opacity: 0.5;
+}
+
+.zgr-btn {
+    border-radius: 50%;
+}

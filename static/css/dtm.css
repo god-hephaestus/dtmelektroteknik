@@ -1,3 +1,7 @@
+:root {
+  --dtm-red: #f53240;
+}
+
 body {
   background-color: #e9e9e9;
   overflow-x: hidden;
@@ -8,39 +12,27 @@ ul {
 }
 
 a:hover {
-  color: #f53240;
+  color:var(--dtm-red);
 }
 
 #navbarat {
   background: #fff;
-  color: #f53240;
+  color:var(--dtm-red);
   font-family: 'Lato', sans-serif;
   padding: 0;
   margin: 0;
 }
 
 #switchlang {
-  height: 2em;
-  width: 2em;
   border: none;
   background-color: #e9e9e9;
   padding: 0 !important;
   background: none !important;
 }
 
-#switchlang2 {
-  height: 5em;
-  width: 5em;
-  border: none;
-  background-color: #e9e9e9;
-  padding: 0 !important;
-  background: none !important;
-}
-
-#langimg {
-  height: inherit;
-  width: inherit;
-  position: inherit;
+#switchlang > img {
+  height: 24px;
+  width: 24px;
 }
 
 /* HERO */
@@ -52,7 +44,8 @@ a:hover {
   align-items: center;
   text-align: center;
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/busbar.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url();
+  background-color: #333;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -66,24 +59,20 @@ a:hover {
 }
 
 .hero .btn {
+  width: 55px; height: 55px;
   display: block;
-  width: 200px;
-  padding: 1em;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 10px;
+  margin: 0 auto 0 auto;
   color: white;
   text-decoration: none;
   font-size: 1.5em;
-  border: 3px solid white;
-  border-radius: 20px;
-  background-color: #cc00006c;
+  background-color: #ae1227;
+  transition: scale 100ms ease;
 }
 
 .hero .btn:hover {
-  font-weight: 600;
-  scale: 1.2;
-  background-color: #cc0000;
+  scale: 1.05;
+  background-color: #cf6666;
 }
 
 /* NAVIGATION */
@@ -92,21 +81,20 @@ a:hover {
   list-style: none;
 }
 
-.nav-links a {
-  text-decoration: none;
+.navsection {
+  background-color: #F5F5F5;
+  align-items: center!important;
 }
 
 .navbar {
-  display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #F5F5F5;
-  color: #cc0000;
-
 }
 
 .nav-links a {
   color: #cc0000;
+  text-decoration: none;
+  padding: 5px 14px;
 }
 
 .logo {
@@ -116,19 +104,17 @@ a:hover {
 }
 
 .menu {
-  display: flex;
-  gap: 1em;
   font-size: 18px;
 }
 
-.menu li:hover {
-  background-color: #a0a0a0;
+.menu li:hover > a {
+  background-color: #ddd;
   transition: 0.3s ease;
   z-index: 6;
 }
 
 .menu li {
-  padding: 5px 14px;
+  display: inline-block;
 }
 
 .services {
@@ -179,7 +165,7 @@ input[type=checkbox] {
   user-select: none;
 }
 
-@media (max-width: 1236px) {
+@media (max-width: 992px) {
   .menu {
     display: none;
     position: absolute;
@@ -241,29 +227,29 @@ input[type=checkbox] {
 }
 
 #cards_landscape_wrap-2 .card-flyer .image-box {
-  background: #ffffff;
+  background: white;
   overflow: hidden;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 #cards_landscape_wrap-2 .card-flyer .image-box img {
-  transition: all .9s ease;
-  -webkit-transition: all .9s ease;
-  -moz-transition: all .9s ease;
-  -o-transition: all .9s ease;
-  -ms-transition: all .9s ease;
+  transition: all .2s ease;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  -ms-transition: all .2s ease;
   width: 100%;
   height: 200px;
 }
 
 #cards_landscape_wrap-2 .card-flyer:hover .image-box img {
   opacity: 0.7;
-  -webkit-transform: scale(1.15);
-  -moz-transform: scale(1.15);
-  -ms-transform: scale(1.15);
-  -o-transform: scale(1.15);
-  transform: scale(1.15);
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 #cards_landscape_wrap-2 .card-flyer .text-box {
@@ -283,17 +269,12 @@ input[type=checkbox] {
   -ms-transition: all 0.2s ease-in;
   -o-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.50);
 }
 
 #cards_landscape_wrap-2 .card-flyer:hover {
   background: #fff;
-  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
-  -webkit-transition: all 0.2s ease-in;
-  -moz-transition: all 0.2s ease-in;
-  -ms-transition: all 0.2s ease-in;
-  -o-transition: all 0.2s ease-in;
-  transition: all 0.2s ease-in;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.50);
   margin-top: 50px;
 }
 
@@ -308,12 +289,12 @@ input[type=checkbox] {
 }
 
 #cards_landscape_wrap-2 .card-flyer .text-box p a {
-  color: #f53240;
+  color:var(--dtm-red);
 }
 
 #cards_landscape_wrap-2 .card-flyer .text-box p a:hover {
   font-weight: bold;
-  border-bottom: 1px solid #f53240;
+  border-bottom: 1px solidvar(--dtm-red);
 
 }
 
@@ -325,7 +306,7 @@ input[type=checkbox] {
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
   letter-spacing: 1px;
-  color: #f53240;
+  color:var(--dtm-red);
 }
 
 
@@ -380,7 +361,7 @@ input[type=checkbox] {
 .ac-container input:checked+label,
 .ac-container input:checked+label:hover {
   background: #97979779;
-  color: #f53240;
+  color:var(--dtm-red);
 
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3), 0 2px 2px rgba(0, 0, 0, 0.1);
   height: 30px;
@@ -577,7 +558,7 @@ input[type=checkbox] {
 }
 
 #phonenmbr p {
-  color: #f53240;
+  color:var(--dtm-red);
   font-family: 'Lato', sans-serif;
   font-size: 28px;
   text-align: center;
