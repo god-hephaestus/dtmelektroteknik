@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 app.secret_key = 'random string'
 
-app.config['MAIL_SERVER'] = ''
+app.config['MAIL_SERVER'] = 'uweb35.doruk.net.tr'
 app.config['MAIL_PORT'] = 465 #default 25, 465 is SSL friendly
 app.config['MAIL_USE_SSL']= True
 app.config['MAIL_USERNAME']= 'batuhan.sahin@dtmbusbar.com' #mail adress 
@@ -30,7 +30,7 @@ translations = [
 ##################
 
 def sendContactForm(args):
-    msg = Message("Message from Contact Form",sender="batuhan.sahin@dtmbusbar.com",recipients=["ENTER MAIL HERE ENTER MAIL HERE ENTER MAIL HERE ENTER MAIL HERE ENTER MAIL HERE"])
+    msg = Message("Message from Contact Form",sender="batuhan.sahin@dtmbusbar.com",recipients=["batuhansahin3h@gmail.com"])
     msg.html = f"""You have a new message from <b>{args['name']}</b><br><a href="mailto:{args['email']}>{args['email']}</a><hr>{args['message']}"""
     mail.send(msg)
 
