@@ -109,6 +109,10 @@ def page_haberler():
     lang_id = get_lang()
     return render_template('haberler.html', translation = translations[lang_id])
 
+@app.route("/light2022")
+def page_light2022():
+    lang_id = get_lang()
+    return render_template('news1.html', translation = translations[lang_id])
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
