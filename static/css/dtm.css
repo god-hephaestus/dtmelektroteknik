@@ -107,7 +107,6 @@ a:hover {
 }
 
 .menu li:hover > a {
-  background-color: #ddd;
   transition: 0.3s ease;
   z-index: 6;
 }
