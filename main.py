@@ -1,16 +1,18 @@
+import os
 from flask import Flask, render_template, session, request, redirect, url_for
-from flask_mail import Mail, Message
+# from flask_mail import Mail, Message
 app = Flask(__name__)
-
+__ROOTFOLDER__ = os.path.dirname(os.path.abspath(__file__))
+print(f"Rootfolder: {__ROOTFOLDER__}")
 app.secret_key = 'random string'
 
-app.config['MAIL_SERVER'] = 'uweb35.doruk.net.tr'
-app.config['MAIL_PORT'] = 465 #default 25, 465 is SSL friendly
-app.config['MAIL_USE_SSL']= True
-app.config['MAIL_USERNAME']= 'batuhan.sahin@dtmbusbar.com' #mail adress 
-app.config['MAIL_PASSWORD']= 'DTM1907.,' #mail password 
+### app.config['MAIL_SERVER'] = 'uweb35.doruk.net.tr'
+### app.config['MAIL_PORT'] = 465 #default 25, 465 is SSL friendly
+### app.config['MAIL_USE_SSL']= True
+### app.config['MAIL_USERNAME']= 'batuhan.sahin@dtmbusbar.com' #mail adress 
+### app.config['MAIL_PASSWORD']= 'DTM1907.,' #mail password 
 
-mail = Mail(app)
+### mail = Mail(app)
 
 ###################
 #   TRANSLATION   #
@@ -29,10 +31,10 @@ translations = [
 #    FUNCTION    #
 ##################
 
-def sendContactForm(args):
-    msg = Message("Message from Contact Form",sender="batuhan.sahin@dtmbusbar.com",recipients=["batuhansahin3h@gmail.com"])
-    msg.html = f"""You have a new message from <b>{args['name']}</b><br><a href="mailto:{args['email']}>{args['email']}</a><hr>{args['message']}"""
-    mail.send(msg)
+### def sendContactForm(args):
+###     msg = Message("Message from Contact Form",sender="batuhan.sahin@dtmbusbar.com",recipients=["batuhansahin3h@gmail.com"])
+###     msg.html = f"""You have a new message from <b>{args['name']}</b><br><a href="mailto:{args['email']}>{args['email']}</a><hr>{args['message']}"""
+###     mail.send(msg)
 
 def get_lang():
     try:
@@ -54,8 +56,8 @@ def post_contact():
             hermes['name'] = request.form['name']
             hermes['email'] = request.form['email'].replace(' ', '').lower()
             hermes['message'] = request.form['message']
-            sendContactForm(hermes)
-            return render_template('iletisim.html', translation = translations[lang_id])
+            print(hermes)
+            return redirect(url_for('iletisim'))
         except Exception as e:
             print(e)
 
@@ -109,10 +111,6 @@ def page_haberler():
     lang_id = get_lang()
     return render_template('haberler.html', translation = translations[lang_id])
 
-@app.route("/light2022")
-def page_light2022():
-    lang_id = get_lang()
-    return render_template('news1.html', translation = translations[lang_id])
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port="5500")
