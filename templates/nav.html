@@ -16,10 +16,10 @@
                         <a href="/products">{{ translation[4] }}</a>
                         <!-- DROPDOWN MENU -->
                         <ul class="dropdown">
-                            <li><span></span><a href="/products#product1">AB-E {{ translation[6] }} BUSBAR</a></li>
-                            <li><span></span><a href="/products#product2">SP-H {{ translation[7] }} BUSBAR</a></li>
-                            <li><span></span><a href="/products#product3">MP-H {{ translation[8] }} BUSBAR</a></li>
-                            <li><span></span><a href="/products#product4">HP-K {{ translation[9] }} BUSBAR</a></li>
+                            <li><span></span><a href="/products#abe">AB-E {{ translation[6] }} BUSBAR</a></li>
+                            <li><span></span><a href="/products#sph">SP-H {{ translation[7] }} BUSBAR</a></li>
+                            <li><span></span><a href="/products#mph">MP-H {{ translation[8] }} BUSBAR</a></li>
+                            <li><span></span><a href="/products#hpk">HP-K {{ translation[9] }} BUSBAR</a></li>
                         </ul>
                     </li>
                     <li><a href="/hizmetler">{% if session['language'] == 0 %}
@@ -29,12 +29,12 @@
                             {% endif %}</a></li>
                     <li><a href="/referanslar">{{ translation[13] }}</a></li>
                     <li><a href="/sertifikalar">{{ translation[14]}}</a></li>
-                    <li><a href="/iletisim"><i class="fa-solid fa-envelope-open-text"></i></a></li>
+                    <li><a href="/iletisim" title="{% if session['language'] == 0 %}İletişim{% else %}Contact{% endif %}"><i class="fa-solid fa-envelope-open-text"></i></a></li>
                     <li>
                         <form action="/set_lang" method="post">
                             <input hidden name="langval"
                                 value="{% if session['language'] == 0 %}1{% else %}0{% endif %}"></input>
-                            <button type="submit" id="switchlang">
+                            <button type="submit" id="switchlang" title="{% if session['language'] == 0 %}Dili Değiştir{% else %}Switch Language{% endif %}">
                                 <img id="langimg"
                                     src="../static/img/flag-{% if session['language'] == 0 %}tr{% else %}eng{% endif %}.png">
                             </button>
