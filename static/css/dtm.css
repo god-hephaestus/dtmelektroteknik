@@ -44,7 +44,7 @@ a:hover {
   align-items: center;
   text-align: center;
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.801), rgba(0, 0, 0, 0.5)), url("../img/busbar.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.801), rgba(0, 0, 0, 0.5)), url("../img/busbar.png");
   background-color: #333;
   background-size: cover;
   background-position: center center;
