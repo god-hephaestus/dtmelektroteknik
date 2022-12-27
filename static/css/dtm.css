@@ -359,8 +359,8 @@ input[type=checkbox] {
 .ac-container input:checked+label,
 .ac-container input:checked+label:hover {
   background: #97979779;
+  border-color:#97979779 ;
   color:var(--dtm-red);
-
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3), 0 2px 2px rgba(0, 0, 0, 0.1);
   height: 30px;
   line-height: 21px;
@@ -513,42 +513,8 @@ input[type=checkbox] {
 /* BASIC PAGE MAIN TEXT END */
 
 /* TOP IMAGE W TEXT */
-#hizmetler {
+#hizmetler, #kurumsal , #iletisim {
   background-image: url("../img/bg_red.png");
-}
-
-#kurumsal {
-  background-image: url("../img/bg_red.png");
-}
-
-#iletisim {
-  background-image: url("../img/bg_red.png");
-}
-
-.parallax {
-
-  min-height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.parallax h1 {
-  color: #ffffff;
-  text-align: center;
-  scale: 1.5;
-  padding-top: 160px;
-  padding-bottom: auto;
-  font-family: 'Lato', sans-serif;
-}
-
-.parallax p {
-  color: #ffffff;
-  margin-top: 60px;
-  text-align: center;
-  scale: 1.5;
-  font-family: 'Lato', sans-serif;
 }
 
 #phonenmbr {
@@ -575,7 +541,7 @@ input[type=checkbox] {
   text-align: center;
 }
 
-/* PARALLAX & PHONE ICON END */
+/* PHONE ICON END */
 /* RESPONSIVE IMG GALLERY FOR PRODUCTS PAGE START */
 .carousel-inner {
   padding-top: 6rem;
@@ -592,7 +558,7 @@ input[type=checkbox] {
 #mediumexp {
   padding-top: 3%;
   padding-left: 4%;
-  color: rgb(255, 255, 255);
+  color: #fff;
 }
 
 #exppar {
