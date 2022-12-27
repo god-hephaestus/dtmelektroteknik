@@ -44,12 +44,11 @@ a:hover {
   align-items: center;
   text-align: center;
   color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("../img/busbar_1.jpg");
   background-color: #333;
-  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 .hero h1 {
@@ -74,6 +73,22 @@ a:hover {
   background-color: #cf6666;
 }
 
+.video-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.027);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 40vh;
+}
+
+.caption {
+  position: absolute;
+  top: 70%;
+  text-align: center;
+}
 /* NAVIGATION */
 
 .menu li {

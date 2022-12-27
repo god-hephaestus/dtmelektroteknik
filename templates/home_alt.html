@@ -10,23 +10,23 @@
 
 <body>
   {% include 'nav.html' %}
-<!--  <section class="hero zgr-hero">
-    <div class="hero-inner zgr-hero-inner" style="z-index: 2;">
-      <h1>{% if session['language'] == 0 %}
-        DTM Elektroteknik A.Ş.
-        {% else %}
-        DTM Electrotechnical Inc.
-        {% endif %}</h1>
-      <div class="row">
-        <div class="col">
-          <a href="#zgr-page-content" class="btn zgr-btn">▼</a>
+  <section class="hero zgr-hero">
+    <video autoplay muted loop id="bg-video">
+      <source src="../static/img/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay header-text">
+      <div class="container">
+        <div class="caption">
+          <h2>DTM Elektroteknik</h2>
+          <div class="main-button-red">
+            <div class="scroll-to-section"><a href="#contact">Bize Ulaşın</a></div>
+          </div>
         </div>
       </div>
-    </div>-->
-    <!--<div id="zgr-background-ptn"></div>-->
-  <!--</section>
-  <div id="zgr-page-content"></div>  -->
-  
+    </div>
+  </section>
+
+
 
   <div class="container align-self-center">
     <div class="row align-self-center mx-auto" id="cards_landscape_wrap-2">
@@ -102,7 +102,8 @@
                   Satış öncesi ve satış sonrası hizmetleri mükemmel bir düzeyde vermek, DTM Elektroteknik A.Ş. için çok
                   önemlidir.
                   {% else %}
-                  It is at most importance for DTM Elektroteknik to provide a flawless service both before and after the sales.
+                  It is at most importance for DTM Elektroteknik to provide a flawless service both before and after the
+                  sales.
                   {% endif %}</p>
               </div>
             </div>
@@ -197,25 +198,25 @@
       <!-- ACCORDION COL END-->
       <!-- NEWS-->
       <div class="newsmain col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0 col-xs-12 container">
-        
-          <a href="/haberler">
-            <div class="card-flyer align-self-center justify-content-center ">
-              <div class="text-box">
-                <div class="image-box">
-                  <img src="../static/img/icon-news.jpg" alt="" />
-                </div>
-                <div class="text-container">
-                  <h6 class="text-uppercase">{{ translation[15] }}</h6>
-                  <p>{% if session['language'] == 0 %}
-                    DTM Elektroteknik A.Ş Haberleri
-                    {% else %}
-                    DTM Electrotechnical Inc. News
-                    {% endif %}</p>
-                </div>
+
+        <a href="/haberler">
+          <div class="card-flyer align-self-center justify-content-center ">
+            <div class="text-box">
+              <div class="image-box">
+                <img src="../static/img/icon-news.jpg" alt="" />
+              </div>
+              <div class="text-container">
+                <h6 class="text-uppercase">{{ translation[15] }}</h6>
+                <p>{% if session['language'] == 0 %}
+                  DTM Elektroteknik A.Ş Haberleri
+                  {% else %}
+                  DTM Electrotechnical Inc. News
+                  {% endif %}</p>
               </div>
             </div>
-          </a>
-        
+          </div>
+        </a>
+
       </div>
       <!-- OWL CAROUSEL START-->
       <div class="col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0 col-xs-12 ">
