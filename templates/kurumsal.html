@@ -8,16 +8,14 @@
 
 <body>
     {% include 'nav.html' %}
-    <div class="">
-        <div id="kurumsal" class="parallax">
-            <h1 class="text-uppercase">{{ translation[2] }}</h1>
-            <p>{% if session['language'] == 0 %}
+        <div id="kurumsal" class="mediumhead">
+            <h2 class="text-uppercase" id="mediumexp">{{ translation[2] }}</h2>
+            <p id="exppar">{% if session['language'] == 0 %}
                 Busbar Kanal Sistemleri Konusunda Büyük Tecrübe
                 {% else %}
                 Great Expertise in Busbar Duct Systems
                 {% endif %}</p>
         </div>
-    </div>
 
 
     <div class="container">

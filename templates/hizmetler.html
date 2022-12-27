@@ -8,20 +8,20 @@
 
 <body>
     {% include 'nav.html' %}
-    <div class="">
-        <div id="hizmetler" class="parallax">
-            <h1>{% if session['language'] == 0 %}
+    
+        <div id="hizmetler" class="mediumhead">
+            <h2 class="text-uppercase" id="mediumexp">{% if session['language'] == 0 %}
                 HİZMETLER
                 {% else %}
                 SERVICES
-                {% endif %}</h1>
-            <p>{% if session['language'] == 0 %}
+                {% endif %}</h2>
+            <p id="exppar">{% if session['language'] == 0 %}
                 Müşteri memnuniyeti bizim için önemlidir.
                 {% else %}
                 The customer is important to us.
                 {% endif %}</p>
         </div>
-    </div>
+    
 
 
     <div class="container">
