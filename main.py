@@ -21,10 +21,10 @@ app.secret_key = 'random string'
 translations = [
     ["tr","Ana Sayfa","Kurumsal","Hakkımızda","Ürünler","Ürünlerimiz","AYDINLATMA","ALÇAK GÜÇ","ORTA GÜÇ","YÜKSEK GÜÇ"
     ,"İletişim","Kullanım Alanları","Hizmetler","Referanslar","Sertifikalar","Haberler","Hızlı Navigasyon","DTM Elektroteknik A.Ş.","Adınız","Mesajınız"
-    ,"BÖLGE BAYİ","Adres","Devamını gör..","Adınızı Giriniz","Mesajınızı buraya yazabilirsiniz...","Gönder","Proje Referanslarımızdan Örnekler","","",""],
+    ,"BÖLGE BAYİ","Adres","Devamını gör..","Adınızı Giriniz","Mesajınızı buraya yazabilirsiniz...","Gönder","Proje Referanslarımızdan Örnekler","Güç Dağıtımında En Akıllı Yol","",""],
     ["eng","Homepage","Corporate","About Us","Products","Our Products","LIGHTNING","LOW POWER","MEDIUM POWER","HIGH POWER"
     ,"Contact Us","Application Areas","Services","References","Certificates","News","Fast Navigation","DTM Elektroteknik","Name","Message"
-    ,"REGIONAL DEALER","Adress","Read more..","John Doe","You can write your message here...","Send","Some of our project references","","",""]
+    ,"REGIONAL DEALER","Adress","Read more..","John Doe","You can write your message here...","Send","Some of our project references","The Smartest Way Of Power Distribution","",""]
 ]
 
 ##################
