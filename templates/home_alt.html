@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="{{ translation[0] }}">
 
 <head>
   {% include 'HEAD.html' %}
@@ -110,73 +110,75 @@
       </div>
       <!-- CARD3 END-->
       <!-- ACCORDION COL START-->
-      <section id="acccc" class="ac-container col-xs-12 col-sm-12 col-md-6 col-lg-4 ">
-        <div>
-          <input id="ac-1" name="accordion-1" type="radio">
-          <label for="ac-1">{% if session['language'] == 0 %}
-            Alüminyum Kasa
-            {% else %}
-            Aluminum Case
-            {% endif %}</label>
-          <article class="ac-alk">
-            <p>{% if session['language'] == 0 %}
-              Hafif Ağırlık <br>
-              Korozyon Direnci <br>
-              Yüksek Isı Dağılımı <br>
-              Kolay Montaj
+      <div class="ac-container col-xs-12 col-sm-12 col-md-6 col-lg-4 ">
+        <section id="acccc">
+          <div>
+            <input id="ac-1" name="accordion-1" type="radio" checked="">
+            <label for="ac-1">{% if session['language'] == 0 %}
+              Alüminyum Kasa
               {% else %}
-              Light Weight <br>
-              Corrosion Resistance <br>
-              High Heat Dissipation <br>
-              Easy Assembly
-              {% endif %}</p>
-          </article>
-        </div>
-        <div>
-          <input id="ac-2" name="accordion-1" type="radio">
-          <label for="ac-2">{% if session['language'] == 0 %}
-            İzolasyon
-            {% else %}
-            Isolation
-            {% endif %}</label>
-          <article class="ac-izol">
-            <p>{% if session['language'] == 0 %}
-              Epoksi <br>
-              Yüksek Çalışma Isısı <br>
-              Dielektrik Dayanım<br>
-              Optimum Isı Dağılım için İnce Kat<br>
-              Neme Karşı Epoksi
+              Aluminum Case
+              {% endif %}</label>
+            <article class="ac-alk">
+              <p>{% if session['language'] == 0 %}
+                Hafif Ağırlık <br>
+                Korozyon Direnci <br>
+                Yüksek Isı Dağılımı <br>
+                Kolay Montaj
+                {% else %}
+                Light Weight <br>
+                Corrosion Resistance <br>
+                High Heat Dissipation <br>
+                Easy Assembly
+                {% endif %}</p>
+            </article>
+          </div>
+          <div>
+            <input id="ac-2" name="accordion-1" type="radio">
+            <label for="ac-2">{% if session['language'] == 0 %}
+              İzolasyon
               {% else %}
-              Epoxy <br>
-              High Working Temperature <br>
-              Dielectric Strength<br>
-              Thin Coat for Optimum Heat Dissipation<br>
-              Moisture Resistant Epoxy
-              {% endif %}
-            </p>
-          </article>
-        </div>
-        <div>
-          <input id="ac-3" name="accordion-1" type="radio">
-          <label for="ac-3">{% if session['language'] == 0 %}
-            İletkenler
-            {% else %}
-            Conductors
-            {% endif %}</label>
-          <article class="ac-ilet">
-            <p>{% if session['language'] == 0 %}
-              Yüksek Elektrik İletkenliği <br>
-              Isı Rezistansı <br>
-              Güvenilir Güçlü Sağlam Yapı
+              Isolation
+              {% endif %}</label>
+            <article class="ac-izol">
+              <p>{% if session['language'] == 0 %}
+                Epoksi <br>
+                Yüksek Çalışma Isısı <br>
+                Dielektrik Dayanım<br>
+                Optimum Isı Dağılım için İnce Kat<br>
+                Neme Karşı Epoksi
+                {% else %}
+                Epoxy <br>
+                High Working Temperature <br>
+                Dielectric Strength<br>
+                Thin Coat for Optimum Heat Dissipation<br>
+                Moisture Resistant Epoxy
+                {% endif %}
+              </p>
+            </article>
+          </div>
+          <div>
+            <input id="ac-3" name="accordion-1" type="radio">
+            <label for="ac-3">{% if session['language'] == 0 %}
+              İletkenler
               {% else %}
-              High Electrical Conductivity <br>
-              Heat Resistor <br>
-              Reliable Strong Robust Construction
-              {% endif %}</p>
-          </article>
-        </div>
-        <div>
-          <input id="ac-4" name="accordion-1" type="radio" checked="">
+              Conductors
+              {% endif %}</label>
+            <article class="ac-ilet">
+              <p>{% if session['language'] == 0 %}
+                Yüksek Elektrik İletkenliği <br>
+                Isı Rezistansı <br>
+                Güvenilir Güçlü Sağlam Yapı
+                {% else %}
+                High Electrical Conductivity <br>
+                Heat Resistor <br>
+                Reliable Strong Robust Construction
+                {% endif %}</p>
+            </article>
+          </div>
+        </section>
+        <div class="seperation">
+          <input id="ac-4" type="radio" checked="">
           <label for="ac-4">{% if session['language'] == 0 %}
             Uygulama Alanları
             {% else %}
@@ -192,7 +194,7 @@
               {% endif %}</p>
           </article>
         </div>
-      </section>
+      </div>
       <!-- ACCORDION COL END-->
       <!-- NEWS-->
       <div class="newsmain col-lg-4 col-md-6 col-sm-8 offset-sm-2 offset-md-0 col-xs-12 container">

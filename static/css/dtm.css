@@ -777,6 +777,8 @@ footer {
 }
 
 /* accordion*/
+.seperation label {margin-top: calc(20% + 30px);}
+
 #acccc {
   border-right: none
 }
